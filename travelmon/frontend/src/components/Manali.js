@@ -29,7 +29,7 @@ const Goa = () => {
                 <Grid item>
                     <img src="static/images/Manali.jpg" width="194" alt="Manali Image" />
                     <Typography padding={5} align="center">
-                        Goa is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats.
+                        Manali is a town, near Kullu town in Kullu district in the Indian state of Himachal Pradesh.[2] It is situated in the northern end of the Kullu Valley, formed by the Beas River.
                     </Typography>
                 </Grid >
             </Grid>
