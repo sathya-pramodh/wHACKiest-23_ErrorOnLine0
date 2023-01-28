@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import main
+from api.views import LoginUser, LogoutUser, ListLocations, ListWeathers
 
 urlpatterns = [
-    path("home", main),
-    path("", main)
+    path("login-user", LoginUser.as_view()),
+    path("logout-user", LogoutUser.as_view()),
+    path("get-locations", ListLocations.as_view()),
+    path("get-weathers", ListWeathers.as_view()),
 ]
