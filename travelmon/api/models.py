@@ -60,14 +60,14 @@ class User(AbstractBaseUser):
 class Weather(models.Model):
     name = models.CharField(max_length=30, unique=True)
 
-    def set_name(self, name):
-        self.name = name
-
 
 class Location(models.Model):
     name = models.CharField(max_length=30, unique=True)
 
-    def set_name(self, name):
-        weather = self.model(name=name)
-        weather.save(using=self._db)
-        return weather
+
+def default():
+    return {}
+
+
+class Suggestion(models.Model):
+    all_suggestions = models.JSONField(default=default)

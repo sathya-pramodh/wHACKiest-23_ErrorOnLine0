@@ -2,8 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, generics
 from django.contrib.auth import login, logout, authenticate
-from .models import User, Weather, Location
-from .serializers import WeatherSerializer, LocationSerializer
+from .models import User, Weather, Location, Suggestion
+from .serializers import WeatherSerializer, LocationSerializer, SuggestionSerializer
 
 
 class LoginUser(APIView):
@@ -42,3 +42,8 @@ class ListLocations(generics.ListAPIView):
 class ListWeathers(generics.ListAPIView):
     queryset = Weather.objects.all()
     seralizer_class = WeatherSerializer
+
+
+class ListAllSuggestions(generics.ListAPIView):
+    queryset = Suggestion.objects.all()
+    serializer_class = SuggestionSerializer
